@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Color Palette Plugin</title>
+</head>
+<body>
+  <div id="content">
+    <h2>Color Palette</h2>
+    <pre id="json-output"></pre>
+  </div>
+  <script>
+    // ارتباط با پلاگین
+    onmessage = (event) => {
+      const { type, payload } = event.data.pluginMessage;
+      if (type === 'show-json') {
+        document.getElementById('json-output').textContent = JSON.stringify(payload, null, 2);
+      }
+    };
+  </script>
+</body>
+</html>

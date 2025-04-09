@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      window.onmessage = async (event) => {
+        const message = event.data.pluginMessage;
+        if (message.type === 'show-json') {
+          const json = JSON.stringify(message.payload, null, 2);
+          const pre = document.createElement('pre');
+          pre.textContent = json;
+          document.body.appendChild(pre);
+
+          const btn = document.createElement('button');
+          btn.textContent = 'کپی JSON';
+          btn.onclick = () => {
+            navigator.clipboard.writeText(json);
+            btn.textContent = 'کپی شد ✅';
+          };
+          document.body.appendChild(btn);
+        }
+      };
+    </script>
+  </body>
+</html>

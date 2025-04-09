@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "./",
+    "strict": true,
+    "lib": ["es2017"],
+    "types": ["@figma/plugin-typings"]
+  }
+  "include": ["F:/AITools/figma-color-palette-plugin/code.ts"]
+
+}

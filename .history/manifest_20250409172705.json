@@ -1,0 +1,8 @@
+{
+    "name": "Color Palette Exporter For Bricks Builder",
+    "id": "color-palette-exporter-for",
+    "main": "code.js",
+    "ui": "ui.html",
+    "editorType": ["figma"],
+    "api": "1.0.0"
+  }
